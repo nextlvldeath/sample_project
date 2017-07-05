@@ -1,0 +1,182 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/* make body full page */
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.console{
+  background-color: white;
+  color: red;
+  font-weight: bold;
+}
+
+/* menu */
+
+.menu{
+  background-color: rgba(255,255,255,1);
+  left:20px;
+  color: black;
+  width: 235px;
+  height: 50%;
+  position: absolute;
+  font-weight: bold;
+  box-shadow: 0 0 30px rgba(0,0,0,1);
+}
+
+.menu_description{
+  background-color: rgba(0,0,0,0.75);
+  color: white;
+  position: absolute;
+  font-weight: bold;
+  padding: 9px;
+  font-size: 1.2em;
+  max-width: 500px;
+  box-shadow: 0 0 20px rgba(255,255,255,1);
+}
+
+.menu h1{
+  background-color: rgba(255,0,0,0.75);
+  color: white;
+  text-align: center;
+  font-size: 1.6em;
+  padding: 10px;
+}
+
+.choices{
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.choices::-webkit-scrollbar{ 
+  display: none; 
+}
+
+.choices div{
+  padding: 6px;
+  border-bottom-style:solid;
+  border-bottom-width: 1.3px;
+  border-bottom-color: gray;
+  font-size: 1.3em;
+}
+
+.choices .selected{
+  background-color: rgba(0,0,0,1);
+  color: white;
+}
+
+/* progress bar */
+.progressbar{
+  position: absolute;
+  border-bottom-style:solid;
+  border-bottom-style:solid;
+  border-top-style:solid;
+  border-left-style:solid;
+  border-right-style:solid;
+}
+
+.progressbar .inner{
+}
+
+.progressbar .label{
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px black;
+}
+
+/* wprompt */
+.wprompt{
+  position: absolute;
+  background-color: rgba(255,255,255,0.50);
+  color: black;
+  width: 500px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.90);
+}
+
+.wprompt h1{
+  font-size: 1.1em;
+}
+
+.wprompt textarea{
+  outline: none !important;
+  background-color: rgba(255,255,255,1);
+  border: 1px solid rgba(0,0,0,0.30);
+  flex: 1;
+  color: black;
+  width: 100%;
+  padding: 4px;
+  resize: none;
+  box-sizing: border-box;
+}
+
+.wprompt textarea:focus{
+  outline: none !important;
+}
+
+.wprompt .help{
+  font-size: 0.9em;
+  font-style: italic;
+  padding: 3px;
+}
+
+/* request manager */
+.request_manager{
+  position: absolute;
+  bottom: 50px;
+  left: 350px;
+  text-align: right;
+}
+
+.request_manager div{
+  margin-top: 10px;
+}
+
+.request_manager div > span{
+  font-size: 1.2em;
+  color: white;
+  font-weight: bold;
+  background-color: rgba(0,0,0,0.50);
+  padding: 4px;
+}
+
+.request_manager .yes{
+  padding-left: 15px;
+  color: rgb(0,255,0);
+  font-size: 1em;
+}
+
+.request_manager .no{
+  color: rgb(255,0,0);
+  font-size: 1em;
+}
+
+/* announce */
+
+.announce{
+  position: absolute;
+  bottom: 0;
+  left:75%;
+  width: 380px;
+  height: 70px;
+  padding: 10px;
+  margin-left: 0;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-shadow: 2px 2px black;
+  color: white;
+  display: none;
+  opacity: 0.90;
+  box-shadow: 0 0 30px rgba(0,0,0,1);
+}
+
