@@ -232,7 +232,7 @@ cfg.item_transformers = {
     }
   },
   {
-    name="Станция переработки нефти", -- menu name
+    name="Электростанция", -- menu name
     -- permissions = {"harvest.water_bottle_tacos"}, -- you can add permissions
     r=0,g=125,b=255, -- color
     max_units=20,
@@ -240,37 +240,15 @@ cfg.item_transformers = {
     x=2792.408203125,y=1711.2626953125,z=24.6192569732666, -- pos 
     radius=3, height=1.5, -- area
     recipes = {
-      ["Переработать"] = { -- action name
-        description="Переработать нефть в топливо.", -- action descriptions
+      ["Сбыть"] = { -- action name
+        description="Продать нефть.", -- action descriptions
         in_money=0, -- money taken per unit
         out_money=0, -- money earned per unit
         reagents={
 		  ["neft"] = 1
 		}, -- items taken per unit
         products={
-		  ["toplivo"] = 1
-		}
-      }
-    }
-  },
-  {
-    name="Скупка топлива", -- menu name
-    -- permissions = {"harvest.water_bottle_tacos"}, -- you can add permissions
-    r=0,g=125,b=255, -- color
-    max_units=20,
-    units_per_minute=10,
-    x=838.809631347656,y=-1925.26098632813,z=29.3146686553955, -- pos 
-    radius=3, height=1.5, -- area
-    recipes = {
-      ["Переработать"] = { -- action name
-        description="Переработать нефть в топливо.", -- action descriptions
-        in_money=0, -- money taken per unit
-        out_money=0, -- money earned per unit
-        reagents={
-		  ["toplivo"] = 1
-		}, -- items taken per unit
-        products={
-		  ["dirty_money"] = 650
+		  ["dirty_money"] = 750
 		}
       }
     }
@@ -482,27 +460,6 @@ cfg.item_transformers = {
       }
     }
   },
-    {
-    name="Лесопилка", -- menu name
-    -- permissions = {"harvest.water_bottle_tacos"}, -- you can add permissions
-    r=0,g=125,b=255, -- color
-    max_units=20,
-    units_per_minute=10,
-    x=-508.344818115234,y=5268.54443359375,z=80.6101150512695, -- pos
-    radius=5, height=1.5, -- area
-    recipes = {
-      ["Напилить"] = { -- action name
-        description="Забрать бревна для лесопилки.", -- action descriptions
-        in_money=0, -- money taken per unit
-        out_money=0, -- money earned per unit
-        reagents={
-		["brevna"] = 1 }, -- items taken per unit
-        products={ -- items given per unit
-          ["doski"] = 4 
-        }
-      }
-    }
-  },
   {
     name="Склад досок", -- menu name
     -- permissions = {"harvest.water_bottle_tacos"}, -- you can add permissions
@@ -517,60 +474,16 @@ cfg.item_transformers = {
         in_money=0, -- money taken per unit
         out_money=0, -- money earned per unit
         reagents={
-		  ["doski"] = 1 
+		  ["brevna"] = 1 
 		}, -- items taken per unit
         products={
-		  ["dirty_money"] = 200
+		  ["dirty_money"] = 1000
 		}
       }
     }
   },
   {
-    name="Склад досок", -- menu name
-    -- permissions = {"harvest.water_bottle_tacos"}, -- you can add permissions
-    r=0,g=125,b=255, -- color
-    max_units=20,
-    units_per_minute=10,
-    x=1199.18774414063,y=-1356.93469238281,z=35.2269592285156, -- pos
-    radius=5, height=1.5, -- area
-    recipes = {
-      ["Забрать"] = { -- action name
-        description="Забрать бревна для лесопилки.", -- action descriptions
-        in_money=0, -- money taken per unit
-        out_money=0, -- money earned per unit
-        reagents={
-		  ["doski"] = 1 
-		}, -- items taken per unit
-        products={
-		  ["dirty_money"] = 200
-		}
-      }
-    }
-  },
-  {
-    name="Аптека полиции", -- menu name
-    permissions = {"police.vehicle"}, -- you can add permissions
-    r=0,g=125,b=255, -- color
-    max_units=10,
-    units_per_minute=0.05,
-    x=-449.690856933594,y=-347.835357666016,z=34.5017623901367, -- pos
-    radius=5, height=1.5, -- area
-    recipes = {
-      ["Забрать таблетки"] = { -- action name
-        description="Забрать таблетки обезбаливающего.", -- action descriptions
-        in_money=200, -- money taken per unit
-        out_money=0, -- money earned per unit
-        reagents={ 
-		}, -- items taken per unit
-        products={
-		  ["pills"] = 4,
-		  ["medkit"] = 1
-		}
-      }	  
-      }	  
-  },
-  {
-    name="Тренажерный зал", -- menu name
+    name="Body training", -- menu name
     r=255,g=125,b=0, -- color
     max_units=10,
     units_per_minute=1,
@@ -578,7 +491,7 @@ cfg.item_transformers = {
     radius=7.5, height=1.5, -- area
     recipes = {
       ["Strength"] = { -- action name
-        description="Увеличить силу.", -- action description
+        description="Increase your strength.", -- action description
         in_money=0, -- money taken per unit
         out_money=0, -- money earned per unit
         reagents={}, -- items taken per unit
